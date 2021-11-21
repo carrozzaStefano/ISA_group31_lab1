@@ -1,0 +1,102 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : myfir_unfolded
+Version: O-2018.06-SP4
+Date   : Tue Nov 16 12:26:35 2021
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: out_mult215r_reg[0]
+              (rising edge-triggered flip-flop clocked by MY_CLK)
+  Endpoint: DOUTK0_reg[10]
+            (rising edge-triggered flip-flop clocked by MY_CLK)
+  Path Group: MY_CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  myfir_unfolded     5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MY_CLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  out_mult215r_reg[0]/CK (DFFR_X1)                        0.00       0.00 r
+  out_mult215r_reg[0]/Q (DFFR_X1)                         0.11       0.11 r
+  add_7_root_add_0_root_add_316/A[0] (myfir_unfolded_DW01_add_19)
+                                                          0.00       0.11 r
+  add_7_root_add_0_root_add_316/U2/ZN (AND2_X1)           0.05       0.15 r
+  add_7_root_add_0_root_add_316/U1_1/S (FA_X1)            0.11       0.26 f
+  add_7_root_add_0_root_add_316/SUM[1] (myfir_unfolded_DW01_add_19)
+                                                          0.00       0.26 f
+  add_2_root_add_0_root_add_316/B[1] (myfir_unfolded_DW01_add_18)
+                                                          0.00       0.26 f
+  add_2_root_add_0_root_add_316/U1_1/S (FA_X1)            0.15       0.41 r
+  add_2_root_add_0_root_add_316/SUM[1] (myfir_unfolded_DW01_add_18)
+                                                          0.00       0.41 r
+  add_1_root_add_0_root_add_316/B[1] (myfir_unfolded_DW01_add_17)
+                                                          0.00       0.41 r
+  add_1_root_add_0_root_add_316/U1_1/S (FA_X1)            0.12       0.54 f
+  add_1_root_add_0_root_add_316/SUM[1] (myfir_unfolded_DW01_add_17)
+                                                          0.00       0.54 f
+  add_0_root_add_0_root_add_316/B[1] (myfir_unfolded_DW01_add_16)
+                                                          0.00       0.54 f
+  add_0_root_add_0_root_add_316/U34/ZN (OAI211_X1)        0.05       0.59 r
+  add_0_root_add_0_root_add_316/U33/ZN (OAI21_X1)         0.04       0.63 f
+  add_0_root_add_0_root_add_316/U32/ZN (OAI21_X1)         0.05       0.68 r
+  add_0_root_add_0_root_add_316/U31/ZN (OAI21_X1)         0.04       0.71 f
+  add_0_root_add_0_root_add_316/U30/ZN (OAI21_X1)         0.05       0.76 r
+  add_0_root_add_0_root_add_316/U29/ZN (OAI21_X1)         0.04       0.80 f
+  add_0_root_add_0_root_add_316/U28/ZN (OAI21_X1)         0.05       0.85 r
+  add_0_root_add_0_root_add_316/U27/ZN (OAI21_X1)         0.04       0.89 f
+  add_0_root_add_0_root_add_316/U26/ZN (OAI21_X1)         0.05       0.93 r
+  add_0_root_add_0_root_add_316/U25/ZN (OAI21_X1)         0.04       0.97 f
+  add_0_root_add_0_root_add_316/U24/ZN (OAI21_X1)         0.05       1.02 r
+  add_0_root_add_0_root_add_316/U15/ZN (INV_X1)           0.02       1.04 f
+  add_0_root_add_0_root_add_316/U23/ZN (AOI21_X1)         0.06       1.10 r
+  add_0_root_add_0_root_add_316/U12/ZN (INV_X1)           0.02       1.13 f
+  add_0_root_add_0_root_add_316/U22/ZN (OAI21_X1)         0.04       1.17 r
+  add_0_root_add_0_root_add_316/U21/ZN (OAI21_X1)         0.04       1.21 f
+  add_0_root_add_0_root_add_316/U20/ZN (OAI21_X1)         0.05       1.26 r
+  add_0_root_add_0_root_add_316/U16/ZN (INV_X1)           0.02       1.28 f
+  add_0_root_add_0_root_add_316/U19/ZN (AOI21_X1)         0.06       1.34 r
+  add_0_root_add_0_root_add_316/U1/ZN (INV_X1)            0.02       1.37 f
+  add_0_root_add_0_root_add_316/U18/ZN (OAI21_X1)         0.04       1.41 r
+  add_0_root_add_0_root_add_316/U17/ZN (OAI21_X1)         0.04       1.45 f
+  add_0_root_add_0_root_add_316/U1_10/CO (FA_X1)          0.09       1.54 f
+  add_0_root_add_0_root_add_316/U1_11/CO (FA_X1)          0.09       1.63 f
+  add_0_root_add_0_root_add_316/U1_12/CO (FA_X1)          0.09       1.72 f
+  add_0_root_add_0_root_add_316/U1_13/CO (FA_X1)          0.09       1.81 f
+  add_0_root_add_0_root_add_316/U1_14/CO (FA_X1)          0.09       1.90 f
+  add_0_root_add_0_root_add_316/U1_15/CO (FA_X1)          0.09       1.99 f
+  add_0_root_add_0_root_add_316/U1_16/CO (FA_X1)          0.09       2.08 f
+  add_0_root_add_0_root_add_316/U1_17/CO (FA_X1)          0.09       2.18 f
+  add_0_root_add_0_root_add_316/U1_18/CO (FA_X1)          0.09       2.27 f
+  add_0_root_add_0_root_add_316/U1_19/CO (FA_X1)          0.09       2.36 f
+  add_0_root_add_0_root_add_316/U1_20/S (FA_X1)           0.13       2.49 r
+  add_0_root_add_0_root_add_316/SUM[20] (myfir_unfolded_DW01_add_16)
+                                                          0.00       2.49 r
+  DOUTK0_reg[10]/D (DFFR_X1)                              0.01       2.49 r
+  data arrival time                                                  2.49
+
+  clock MY_CLK (rise edge)                                6.20       6.20
+  clock network delay (ideal)                             0.00       6.20
+  clock uncertainty                                      -0.07       6.13
+  DOUTK0_reg[10]/CK (DFFR_X1)                             0.00       6.13 r
+  library setup time                                     -0.03       6.10
+  data required time                                                 6.10
+  --------------------------------------------------------------------------
+  data required time                                                 6.10
+  data arrival time                                                 -2.49
+  --------------------------------------------------------------------------
+  slack (MET)                                                        3.60
+
+
+1

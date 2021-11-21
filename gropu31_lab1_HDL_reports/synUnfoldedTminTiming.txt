@@ -1,0 +1,65 @@
+Information: Updating design information... (UID-85)
+Warning: There are infeasible paths detected in your design that were ignored during optimization. Please run 'report_timing -attributes' and/or 'create_qor_snapshot/query_qor_snapshot -infeasible_paths' to identify these paths.  (OPT-1721)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : myfir_unfolded
+Version: O-2018.06-SP4
+Date   : Sat Nov 20 18:12:18 2021
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: H8[0] (input port clocked by MY_CLK)
+  Endpoint: out_mult328r_reg[17]
+            (rising edge-triggered flip-flop clocked by MY_CLK)
+  Path Group: MY_CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  myfir_unfolded     5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MY_CLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.50       0.50 r
+  H8[0] (in)                                              0.00       0.50 r
+  mult_231/b[0] (myfir_unfolded_DW_mult_tc_51)            0.00       0.50 r
+  mult_231/U733/Z (BUF_X1)                                0.11       0.61 r
+  mult_231/U594/ZN (XNOR2_X1)                             0.09       0.70 r
+  mult_231/U759/ZN (OAI22_X1)                             0.04       0.74 f
+  mult_231/U211/CO (HA_X1)                                0.06       0.80 f
+  mult_231/U207/S (FA_X1)                                 0.13       0.93 r
+  mult_231/U206/S (FA_X1)                                 0.12       1.05 f
+  mult_231/U524/ZN (NAND2_X1)                             0.04       1.09 r
+  mult_231/U740/ZN (OAI21_X1)                             0.03       1.12 f
+  mult_231/U453/ZN (AOI21_X1)                             0.08       1.20 r
+  mult_231/U460/ZN (OAI21_X1)                             0.04       1.24 f
+  mult_231/U461/ZN (AOI21_X1)                             0.05       1.29 r
+  mult_231/U465/ZN (OAI21_X1)                             0.04       1.33 f
+  mult_231/U749/ZN (AOI21_X1)                             0.05       1.37 r
+  mult_231/U748/Z (XOR2_X1)                               0.06       1.44 r
+  mult_231/product[17] (myfir_unfolded_DW_mult_tc_51)     0.00       1.44 r
+  out_mult328r_reg[17]/D (DFFR_X1)                        0.01       1.45 r
+  data arrival time                                                  1.45
+
+  clock MY_CLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                      -0.07      -0.07
+  out_mult328r_reg[17]/CK (DFFR_X1)                       0.00      -0.07 r
+  library setup time                                     -0.04      -0.11
+  data required time                                                -0.11
+  --------------------------------------------------------------------------
+  data required time                                                -0.11
+  data arrival time                                                 -1.45
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -1.55
+
+
+1
