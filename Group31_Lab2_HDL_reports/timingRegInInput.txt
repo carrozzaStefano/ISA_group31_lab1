@@ -1,0 +1,87 @@
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+        -sort_by group
+Design : FPmul
+Version: O-2018.06-SP4
+Date   : Sat Dec 18 17:18:54 2021
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: I1/A_SIG_reg[17]
+              (rising edge-triggered flip-flop clocked by MY_CLK)
+  Endpoint: I2/SIG_in_reg[27]
+            (rising edge-triggered flip-flop clocked by MY_CLK)
+  Path Group: MY_CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FPmul              5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MY_CLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  I1/A_SIG_reg[17]/CK (DFF_X1)                            0.00       0.00 r
+  I1/A_SIG_reg[17]/Q (DFF_X1)                             0.10       0.10 r
+  I2/mult_134/a[17] (FPmul_DW_mult_uns_1)                 0.00       0.10 r
+  I2/mult_134/U2928/Z (XOR2_X1)                           0.09       0.18 r
+  I2/mult_134/U1731/ZN (AND3_X1)                          0.06       0.25 r
+  I2/mult_134/U1730/Z (BUF_X2)                            0.09       0.33 r
+  I2/mult_134/U1723/ZN (NAND2_X1)                         0.05       0.38 f
+  I2/mult_134/U1724/ZN (AND3_X1)                          0.05       0.42 f
+  I2/mult_134/U2763/ZN (OAI21_X1)                         0.03       0.46 r
+  I2/mult_134/U2601/Z (XOR2_X1)                           0.09       0.55 r
+  I2/mult_134/U2596/Z (XOR2_X1)                           0.05       0.59 f
+  I2/mult_134/U2597/Z (XOR2_X1)                           0.08       0.67 f
+  I2/mult_134/U533/CO (FA_X1)                             0.09       0.76 f
+  I2/mult_134/U526/S (FA_X1)                              0.14       0.91 r
+  I2/mult_134/U525/S (FA_X1)                              0.11       1.02 f
+  I2/mult_134/U2038/ZN (OR2_X1)                           0.06       1.08 f
+  I2/mult_134/U2801/ZN (AOI21_X1)                         0.05       1.12 r
+  I2/mult_134/U3188/ZN (OAI21_X1)                         0.04       1.16 f
+  I2/mult_134/U3191/ZN (AOI21_X1)                         0.05       1.21 r
+  I2/mult_134/U3193/ZN (OAI21_X1)                         0.04       1.25 f
+  I2/mult_134/U1946/ZN (AOI21_X1)                         0.05       1.30 r
+  I2/mult_134/U3194/ZN (OAI21_X1)                         0.03       1.33 f
+  I2/mult_134/U1939/ZN (AOI21_X1)                         0.04       1.37 r
+  I2/mult_134/U3178/ZN (OAI21_X1)                         0.03       1.41 f
+  I2/mult_134/U1928/ZN (AOI21_X1)                         0.04       1.45 r
+  I2/mult_134/U3134/ZN (OAI21_X1)                         0.03       1.48 f
+  I2/mult_134/U1933/ZN (AOI21_X1)                         0.04       1.52 r
+  I2/mult_134/U3133/ZN (OAI21_X1)                         0.03       1.56 f
+  I2/mult_134/U1929/ZN (AOI21_X1)                         0.04       1.60 r
+  I2/mult_134/U3190/ZN (OAI21_X1)                         0.03       1.63 f
+  I2/mult_134/U1940/ZN (AOI21_X1)                         0.04       1.67 r
+  I2/mult_134/U3176/ZN (OAI21_X1)                         0.03       1.70 f
+  I2/mult_134/U138/CO (FA_X1)                             0.10       1.80 f
+  I2/mult_134/U1872/ZN (NAND2_X1)                         0.03       1.84 r
+  I2/mult_134/U1874/ZN (NAND3_X1)                         0.05       1.88 f
+  I2/mult_134/U1879/ZN (NAND2_X1)                         0.04       1.92 r
+  I2/mult_134/U1882/ZN (NAND3_X1)                         0.04       1.96 f
+  I2/mult_134/U135/CO (FA_X1)                             0.10       2.06 f
+  I2/mult_134/U1828/ZN (NAND2_X1)                         0.03       2.09 r
+  I2/mult_134/U1831/ZN (NAND3_X1)                         0.03       2.12 f
+  I2/mult_134/U2345/ZN (XNOR2_X1)                         0.05       2.18 f
+  I2/mult_134/product[47] (FPmul_DW_mult_uns_1)           0.00       2.18 f
+  I2/SIG_in_reg[27]/D (DFF_X2)                            0.01       2.19 f
+  data arrival time                                                  2.19
+
+  clock MY_CLK (rise edge)                                2.30       2.30
+  clock network delay (ideal)                             0.00       2.30
+  clock uncertainty                                      -0.07       2.23
+  I2/SIG_in_reg[27]/CK (DFF_X2)                           0.00       2.23 r
+  library setup time                                     -0.04       2.19
+  data required time                                                 2.19
+  --------------------------------------------------------------------------
+  data required time                                                 2.19
+  data arrival time                                                 -2.19
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+

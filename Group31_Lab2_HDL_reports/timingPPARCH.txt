@@ -1,0 +1,140 @@
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+        -sort_by group
+Design : FPmul
+Version: O-2018.06-SP4
+Date   : Sat Dec 18 14:57:37 2021
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: I1/B_SIG_reg[1]
+              (rising edge-triggered flip-flop clocked by MY_CLK)
+  Endpoint: I2/SIG_in_reg[27]
+            (rising edge-triggered flip-flop clocked by MY_CLK)
+  Path Group: MY_CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FPmul              5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MY_CLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  I1/B_SIG_reg[1]/CK (DFF_X1)                             0.00       0.00 r
+  I1/B_SIG_reg[1]/Q (DFF_X1)                              0.10       0.10 r
+  I2/mult_134/B[1] (FPmul_DW02_mult_0_0)                  0.00       0.10 r
+  I2/mult_134/U1558/Z (CLKBUF_X1)                         0.06       0.16 r
+  I2/mult_134/U1666/ZN (AND2_X1)                          0.05       0.21 r
+  I2/mult_134/U1665/ZN (XNOR2_X1)                         0.06       0.28 r
+  I2/mult_134/U2178/ZN (INV_X1)                           0.03       0.31 f
+  I2/mult_134/U1637/ZN (OR2_X1)                           0.05       0.36 f
+  I2/mult_134/U1345/ZN (AND3_X1)                          0.04       0.40 f
+  I2/mult_134/U1477/ZN (XNOR2_X1)                         0.06       0.46 f
+  I2/mult_134/U2649/ZN (AND3_X1)                          0.05       0.51 f
+  I2/mult_134/U1352/ZN (OAI21_X1)                         0.04       0.56 r
+  I2/mult_134/U1698/ZN (AND2_X1)                          0.04       0.60 r
+  I2/mult_134/U1697/ZN (AND2_X1)                          0.05       0.64 r
+  I2/mult_134/U1641/ZN (OAI22_X1)                         0.03       0.68 f
+  I2/mult_134/U1181/ZN (OR2_X2)                           0.06       0.73 f
+  I2/mult_134/U1492/ZN (AOI22_X1)                         0.07       0.80 r
+  I2/mult_134/U1895/ZN (OAI22_X1)                         0.04       0.84 f
+  I2/mult_134/U2648/ZN (AOI21_X1)                         0.04       0.88 r
+  I2/mult_134/U2640/ZN (INV_X1)                           0.02       0.90 f
+  I2/mult_134/U1643/ZN (NAND2_X1)                         0.03       0.93 r
+  I2/mult_134/U1281/ZN (INV_X1)                           0.02       0.96 f
+  I2/mult_134/U1280/ZN (OAI21_X1)                         0.06       1.01 r
+  I2/mult_134/U1601/Z (XOR2_X1)                           0.07       1.09 r
+  I2/mult_134/U1600/ZN (XNOR2_X1)                         0.07       1.15 r
+  I2/mult_134/U1525/ZN (XNOR2_X1)                         0.05       1.20 f
+  I2/mult_134/U1310/ZN (OAI21_X1)                         0.07       1.27 r
+  I2/mult_134/U1372/ZN (OAI21_X1)                         0.04       1.31 f
+  I2/mult_134/U1375/ZN (INV_X1)                           0.03       1.33 r
+  I2/mult_134/U1523/ZN (XNOR2_X1)                         0.06       1.39 r
+  I2/mult_134/U1521/ZN (XNOR2_X1)                         0.06       1.45 r
+  I2/mult_134/U1933/ZN (OAI22_X1)                         0.04       1.49 f
+  I2/mult_134/U2732/ZN (OAI22_X1)                         0.05       1.55 r
+  I2/mult_134/U2731/ZN (OAI222_X1)                        0.05       1.60 f
+  I2/mult_134/U2540/ZN (OAI21_X1)                         0.05       1.65 r
+  I2/mult_134/U1996/ZN (INV_X1)                           0.03       1.68 f
+  I2/mult_134/U1987/ZN (OAI21_X1)                         0.05       1.72 r
+  I2/mult_134/U2763/ZN (OAI211_X1)                        0.04       1.76 f
+  I2/mult_134/U1305/ZN (OAI21_X1)                         0.04       1.80 r
+  I2/mult_134/U2658/ZN (INV_X1)                           0.02       1.83 f
+  I2/mult_134/U1290/ZN (AOI21_X1)                         0.05       1.88 r
+  I2/mult_134/U2725/ZN (OAI22_X1)                         0.04       1.92 f
+  I2/mult_134/U2762/ZN (OAI21_X1)                         0.04       1.96 r
+  I2/mult_134/U1700/ZN (NAND2_X1)                         0.03       1.99 f
+  I2/mult_134/U2657/ZN (OAI21_X1)                         0.03       2.02 r
+  I2/mult_134/U1622/ZN (NAND2_X1)                         0.03       2.05 f
+  I2/mult_134/U1621/ZN (NOR2_X1)                          0.04       2.09 r
+  I2/mult_134/U2726/ZN (OAI22_X1)                         0.04       2.13 f
+  I2/mult_134/U1277/ZN (AOI22_X1)                         0.06       2.19 r
+  I2/mult_134/U2772/ZN (AND2_X1)                          0.05       2.24 r
+  I2/mult_134/U1336/ZN (OAI221_X1)                        0.05       2.29 f
+  I2/mult_134/U1275/ZN (AOI22_X1)                         0.05       2.34 r
+  I2/mult_134/U1276/ZN (INV_X1)                           0.02       2.37 f
+  I2/mult_134/U1739/Z (CLKBUF_X1)                         0.04       2.41 f
+  I2/mult_134/U1342/ZN (AOI22_X1)                         0.06       2.47 r
+  I2/mult_134/U1325/ZN (AOI21_X1)                         0.03       2.50 f
+  I2/mult_134/U2781/ZN (OAI21_X1)                         0.04       2.54 r
+  I2/mult_134/U2819/ZN (INV_X1)                           0.03       2.57 f
+  I2/mult_134/U1632/ZN (AOI21_X1)                         0.05       2.62 r
+  I2/mult_134/U1278/ZN (AOI21_X1)                         0.03       2.65 f
+  I2/mult_134/U1318/ZN (INV_X1)                           0.03       2.69 r
+  I2/mult_134/U1328/ZN (NAND3_X1)                         0.04       2.73 f
+  I2/mult_134/U1326/ZN (AOI22_X1)                         0.05       2.78 r
+  I2/mult_134/U1330/ZN (AND2_X1)                          0.05       2.83 r
+  I2/mult_134/U1649/ZN (OAI22_X1)                         0.03       2.86 f
+  I2/mult_134/U2814/ZN (OAI21_X1)                         0.04       2.90 r
+  I2/mult_134/U2813/ZN (OAI21_X1)                         0.04       2.94 f
+  I2/mult_134/U2780/ZN (OAI21_X1)                         0.04       2.98 r
+  I2/mult_134/U2767/ZN (INV_X1)                           0.02       3.01 f
+  I2/mult_134/U1625/ZN (OR2_X1)                           0.05       3.06 f
+  I2/mult_134/U2733/ZN (OAI21_X1)                         0.04       3.10 r
+  I2/mult_134/U1377/ZN (OAI21_X1)                         0.04       3.13 f
+  I2/mult_134/U2812/ZN (OAI21_X1)                         0.04       3.18 r
+  I2/mult_134/U2811/ZN (OAI21_X1)                         0.05       3.22 f
+  I2/mult_134/U2779/ZN (OAI21_X1)                         0.05       3.27 r
+  I2/mult_134/U1571/ZN (NAND2_X1)                         0.03       3.30 f
+  I2/mult_134/U2808/ZN (AOI21_X1)                         0.04       3.34 r
+  I2/mult_134/U1713/ZN (NOR2_X1)                          0.03       3.37 f
+  I2/mult_134/U2778/ZN (OR2_X1)                           0.06       3.43 f
+  I2/mult_134/U1369/ZN (AOI22_X1)                         0.04       3.47 r
+  I2/mult_134/U1354/ZN (AND2_X1)                          0.05       3.52 r
+  I2/mult_134/U1545/ZN (OAI22_X1)                         0.04       3.55 f
+  I2/mult_134/U2810/ZN (OAI21_X1)                         0.04       3.60 r
+  I2/mult_134/U1712/ZN (NAND2_X1)                         0.03       3.63 f
+  I2/mult_134/U2777/ZN (OAI21_X1)                         0.04       3.67 r
+  I2/mult_134/U1628/ZN (NAND2_X1)                         0.03       3.70 f
+  I2/mult_134/U1534/ZN (OAI21_X1)                         0.04       3.75 r
+  I2/mult_134/U1711/ZN (NAND2_X1)                         0.03       3.78 f
+  I2/mult_134/U1516/ZN (OAI21_X1)                         0.04       3.82 r
+  I2/mult_134/U1570/ZN (NAND2_X1)                         0.03       3.85 f
+  I2/mult_134/U2766/ZN (OAI21_X1)                         0.04       3.89 r
+  I2/mult_134/U1648/ZN (NAND2_X1)                         0.03       3.92 f
+  I2/mult_134/U1763/ZN (XNOR2_X1)                         0.05       3.98 f
+  I2/mult_134/U1762/ZN (XNOR2_X1)                         0.05       4.03 f
+  I2/mult_134/PRODUCT[47] (FPmul_DW02_mult_0_0)           0.00       4.03 f
+  I2/SIG_in_reg[27]/D (DFF_X1)                            0.01       4.04 f
+  data arrival time                                                  4.04
+
+  clock MY_CLK (rise edge)                                4.15       4.15
+  clock network delay (ideal)                             0.00       4.15
+  clock uncertainty                                      -0.07       4.08
+  I2/SIG_in_reg[27]/CK (DFF_X1)                           0.00       4.08 r
+  library setup time                                     -0.04       4.04
+  data required time                                                 4.04
+  --------------------------------------------------------------------------
+  data required time                                                 4.04
+  data arrival time                                                 -4.04
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+

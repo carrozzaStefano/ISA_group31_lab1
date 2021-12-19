@@ -1,0 +1,57 @@
+Warning: Design 'FPmul' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Information: Updating design information... (UID-85)
+Warning: There are infeasible paths detected in your design that were ignored during optimization. Please run 'report_timing -attributes' and/or 'create_qor_snapshot/query_qor_snapshot -infeasible_paths' to identify these paths.  (OPT-1721)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : FPmul
+Version: O-2018.06-SP4
+Date   : Sat Dec 18 19:40:34 2021
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: FP_A[17] (input port clocked by MY_CLK)
+  Endpoint: I1/isINF_stage1_reg
+            (rising edge-triggered flip-flop clocked by MY_CLK)
+  Path Group: MY_CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FPmul              5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock MY_CLK (rise edge)                 0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.50       0.50 f
+  FP_A[17] (in)                            0.00       0.50 f
+  U269/ZN (OR3_X1)                         0.09       0.59 f
+  U260/ZN (NOR4_X1)                        0.05       0.64 r
+  U258/ZN (AND4_X1)                        0.08       0.72 r
+  U334/ZN (INV_X1)                         0.03       0.75 f
+  U335/ZN (OAI22_X1)                       0.06       0.81 r
+  U364/ZN (INV_X1)                         0.02       0.83 f
+  U366/ZN (NOR3_X1)                        0.05       0.89 r
+  I1/isINF_stage1_reg/D (DFF_X1)           0.01       0.89 r
+  data arrival time                                   0.89
+
+  clock MY_CLK (rise edge)                 0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  clock uncertainty                       -0.07      -0.07
+  I1/isINF_stage1_reg/CK (DFF_X1)          0.00      -0.07 r
+  library setup time                      -0.04      -0.11
+  data required time                                 -0.11
+  -----------------------------------------------------------
+  data required time                                 -0.11
+  data arrival time                                  -0.89
+  -----------------------------------------------------------
+  slack (VIOLATED)                                   -1.00
+
+
+1

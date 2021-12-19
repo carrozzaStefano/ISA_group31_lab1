@@ -1,0 +1,57 @@
+Report : area
+Design : FPmul
+Version: O-2018.06-SP4
+Date   : Mon Nov 15 18:52:07 2021
+****************************************
+
+Library(s) Used:
+
+    gtech (File: /software/synopsys/syn_current_64.18/libraries/syn/gtech.db)
+
+Number of ports:                           97
+Number of nets:                           847
+Number of cells:                          479
+Number of combinational cells:            228
+Number of sequential cells:               235
+Number of macros/black boxes:               0
+Number of buf/inv:                         84
+Number of references:                      15
+
+Combinational area:                  0.000000
+Buf/Inv area:                        0.000000
+Noncombinational area:               0.000000
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                     0.000000
+Total area:                 undefined
+
+
+****************************************
+Report : area
+Design : FPmul
+Version: O-2018.06-SP4
+Date   : Mon Nov 15 19:01:42 2021
+****************************************
+
+Library(s) Used:
+
+    NangateOpenCellLibrary (File: /software/dk/nangate45/synopsys/NangateOpenCellLibrary_typical_ecsm_nowlm.db)
+
+Number of ports:                          490
+Number of nets:                          3141
+Number of cells:                         2241
+Number of combinational cells:           2034
+Number of sequential cells:               181
+Number of macros/black boxes:               0
+Number of buf/inv:                        208
+Number of references:                      30
+
+Combinational area:               3755.388005
+Buf/Inv area:                      146.299999
+Noncombinational area:             849.869976
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                  4605.257981
+Total area:                 undefined
