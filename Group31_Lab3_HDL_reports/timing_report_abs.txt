@@ -1,0 +1,83 @@
+
+Information: Updating design information... (UID-85)
+Warning: Design 'riscv_lite' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+Warning: There are infeasible paths detected in your design that were ignored during optimization. Please run 'report_timing -attributes' and/or 'create_qor_snapshot/query_qor_snapshot -infeasible_paths' to identify these paths.  (OPT-1721)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : riscv_lite
+Version: O-2018.06-SP4
+Date   : Wed Feb 16 15:39:57 2022
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: DataPath/ID_EX_MUX/DATA_OUT_reg
+              (rising edge-triggered flip-flop clocked by MY_CLK)
+  Endpoint: DataPath/EX_MEM_ALU_RES/DATA_OUT_reg[33]
+            (rising edge-triggered flip-flop clocked by MY_CLK)
+  Path Group: MY_CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  riscv_lite         5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MY_CLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  DataPath/ID_EX_MUX/DATA_OUT_reg/CK (DFF_X1)             0.00 #     0.00 r
+  DataPath/ID_EX_MUX/DATA_OUT_reg/Q (DFF_X1)              0.10       0.10 r
+  DataPath/ID_EX_MUX/DATA_OUT (FF_21)                     0.00       0.10 r
+  DataPath/MUX_IMM_RS2/selector (mux_gen_N64_2)           0.00       0.10 r
+  DataPath/MUX_IMM_RS2/U5/Z (CLKBUF_X3)                   0.08       0.18 r
+  DataPath/MUX_IMM_RS2/U17/Z (MUX2_X1)                    0.10       0.28 f
+  DataPath/MUX_IMM_RS2/DATA_OUT[11] (mux_gen_N64_2)       0.00       0.28 f
+  DataPath/ALU_i/Input2[11] (ALU)                         0.00       0.28 f
+  DataPath/ALU_i/sub_54/B[11] (ALU_DW01_sub_1)            0.00       0.28 f
+  DataPath/ALU_i/sub_54/U1465/ZN (INV_X1)                 0.04       0.32 r
+  DataPath/ALU_i/sub_54/U1314/ZN (NOR2_X1)                0.03       0.35 f
+  DataPath/ALU_i/sub_54/U1312/ZN (NOR2_X1)                0.06       0.41 r
+  DataPath/ALU_i/sub_54/U1557/ZN (NAND2_X1)               0.04       0.45 f
+  DataPath/ALU_i/sub_54/U1511/ZN (NOR2_X1)                0.04       0.49 r
+  DataPath/ALU_i/sub_54/U1401/ZN (AOI21_X1)               0.03       0.52 f
+  DataPath/ALU_i/sub_54/U1306/ZN (OAI21_X1)               0.06       0.58 r
+  DataPath/ALU_i/sub_54/U1712/ZN (AOI21_X1)               0.04       0.61 f
+  DataPath/ALU_i/sub_54/U996/ZN (XNOR2_X1)                0.06       0.67 f
+  DataPath/ALU_i/sub_54/DIFF[63] (ALU_DW01_sub_1)         0.00       0.67 f
+  DataPath/ALU_i/U157/Z (MUX2_X2)                         0.07       0.74 f
+  DataPath/ALU_i/U39/ZN (NAND3_X1)                        0.04       0.78 r
+  DataPath/ALU_i/U102/ZN (OAI211_X1)                      0.04       0.82 f
+  DataPath/ALU_i/U455/ZN (INV_X1)                         0.04       0.86 r
+  DataPath/ALU_i/U1003/ZN (OAI21_X1)                      0.04       0.90 f
+  DataPath/ALU_i/U285/ZN (INV_X1)                         0.06       0.96 r
+  DataPath/ALU_i/U1019/ZN (NAND3_X1)                      0.04       1.00 f
+  DataPath/ALU_i/Output[33] (ALU)                         0.00       1.00 f
+  DataPath/EX_MEM_ALU_RES/DATA_IN[33] (reg_N64_3)         0.00       1.00 f
+  DataPath/EX_MEM_ALU_RES/U98/ZN (AOI22_X1)               0.06       1.06 r
+  DataPath/EX_MEM_ALU_RES/U99/ZN (INV_X1)                 0.02       1.08 f
+  DataPath/EX_MEM_ALU_RES/DATA_OUT_reg[33]/D (DFF_X1)     0.01       1.09 f
+  data arrival time                                                  1.09
+
+  clock MY_CLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                      -0.07      -0.07
+  DataPath/EX_MEM_ALU_RES/DATA_OUT_reg[33]/CK (DFF_X1)
+                                                          0.00      -0.07 r
+  library setup time                                     -0.04      -0.11
+  data required time                                                -0.11
+  --------------------------------------------------------------------------
+  data required time                                                -0.11
+  data arrival time                                                 -1.09
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -1.20
+
+
+1
